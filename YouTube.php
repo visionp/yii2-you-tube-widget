@@ -3,7 +3,7 @@
 namespace \vision\ytbwidget;
 
 /**
- * This is just an example.
+ * Simple widget
  */
 class YouTube extends \yii\base\Widget
 {
