@@ -1,0 +1,21 @@
+{
+    "name": "vision/yii2-you-tube-widget",
+    "description": "Simple widget you tube for yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","you tube"," widgwt"," simple"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petrenko Aleksandr",
+            "email": "visionp@bigmir.net"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "\\vision\\ytbwidget\\": ""
+        }
+    }
+}
