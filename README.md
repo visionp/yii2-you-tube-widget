@@ -28,7 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?php  echo \vision\ytbwidget\YouTube::widget([
+<?= \vision\ytbwidget\YouTube::widget([
     'videoId' => 'MA6tk7u44mM',
     'width' => 640,
     'height' => 390,
@@ -39,4 +39,4 @@ Once the extension is installed, simply use it in your code by  :
     'events' => [
     ...
     ]
-]); ?>```
+]); ?>
