@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "\\vision\\ytbwidget\\": ""
+            "vision\\ytbwidget\\": ""
         }
     }
 }
