@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist vision/yii2-you-tube-widget": "dev-master
+php composer.phar require --prefer-dist vision/yii2-you-tube-widget "*"
 ```
 
 or add
 
 ```
-"vision/yii2-you-tube-widget": "dev-master"
+"vision/yii2-you-tube-widget": "*"
 ```
 
 to the require section of your `composer.json` file.
