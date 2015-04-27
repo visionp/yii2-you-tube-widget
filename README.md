@@ -27,7 +27,6 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
-
 <?= \vision\ytbwidget\YouTube::widget([
     'videoId' => 'MA6tk7u44mM',
     'width' => 640,
