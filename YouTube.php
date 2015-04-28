@@ -144,12 +144,13 @@ class YouTube extends \yii\base\Widget
      */
     protected function generateJs($idDiv) {
         $this->_playerVars = $this->normalizeSettings();
+        $js_events = '';
         $js  = '';
         $js .= "player_". $idDiv ." = new YT.Player('$idDiv', {";
         $js .= "height: '".$this->height."',";
         $js .= "width: '".$this->width."',";
         $js .= "videoId: '".$this->videoId."',";
-
+        //add player vars
         if(count($this->_playerVars) > 0){
             $js .= "playerVars: {";
             foreach($this->_playerVars as $name => $val){
@@ -157,7 +158,15 @@ class YouTube extends \yii\base\Widget
             }
             $js .= "}";
         }
-        $js .= "});";
+        //add player events
+        if(count($this->events) > 0){
+            $js_events .= "events: {";
+            foreach($this->events as $name => $val) {
+                $js_events .= "$name : $val,";
+            }
+            $js_events .= "}";
+        }
+        $js .= $js_events . "});";
         return $js;
     }
 
