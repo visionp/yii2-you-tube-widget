@@ -32,22 +32,35 @@ Events: "https://developers.google.com/youtube/js_api_reference?hl=ru#EventHandl
 Once the extension is installed, simply use it in your code by  :
 
 <?= \vision\ytbwidget\YouTube::widget([
+
     'videoId' => 'MA6tk7u44mM',
-    'width' => 640,
-    'height' => 390,
+    
     'playerVars'=>[
-        'modestbranding'=>1,
-        ...
+    
+        'modestbranding'=>1
+        
     ],
+    
     'events' => [
-        'onStateChange': function (event) {
+    
+        'onStateChange' => 'function (event) {
+        
             if (event.data == YT.PlayerState.PLAYING) {
+            
                 console.log("Playing..");
-            }else if (event.data == YT.PlayerState.PAUSED){ 
+                
+            }else if (event.data == YT.PlayerState.PAUSED){
+            
                 console.log("Paused..");
+                
             }else{
+            
                 console.log("Buffering/Video Ended");
+                
             }
-        }
+            
+        }'
+        
     ]
+    
 ]); ?>
