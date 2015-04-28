@@ -51,6 +51,12 @@ class YouTube extends \yii\base\Widget
     public $events = Array();
 
     /*
+     * globals vars player = player_{id div}
+     * @var set id div, default random
+     */
+    public $divId;
+
+    /*
      * @var
      */
     protected $_playerVars = Array();
@@ -65,9 +71,7 @@ class YouTube extends \yii\base\Widget
     public function init()
     {
         parent::init();
-        YouTubeAsset::register($this->view);
         $this->_idElement = $this->createId();
-        $this->registerAssetBundle();
     }
 
     /**
@@ -113,6 +117,9 @@ class YouTube extends \yii\base\Widget
      * @return string
      */
     protected function createId() {
+        if($this->divId){
+            return $this->divId;
+        }
         $length = 5;
         $chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
         $numChars = strlen($chars);
@@ -168,7 +175,14 @@ class YouTube extends \yii\base\Widget
 
     public function run()
     {
-       // var_dump($this->view->js); die();
-        return $this->getHtml($this->_idElement);
+        try {
+            YouTubeAsset::register($this->view);
+            $this->registerAssetBundle();
+            $html = $this->getHtml($this->_idElement);
+        }catch(\Exception $e){
+            \Yii::error($e);
+            $html = Html::tag('div', 'Video error');
+        }
+        return $html;
     }
 }
