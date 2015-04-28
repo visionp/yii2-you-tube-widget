@@ -33,6 +33,14 @@ Events: "https://developers.google.com/youtube/js_api_reference?hl=ru#EventHandl
 
 Once the extension is installed, simply use it in your code by  :
 
+Minimum: 
+
+<?php  echo \vision\ytbwidget\YouTube::widget([
+
+    'videoId' => 'OQQpukc_IM4'
+    
+]); ?>
+
 <?= \vision\ytbwidget\YouTube::widget([
 
     'videoId' => 'MA6tk7u44mM',
@@ -65,6 +73,5 @@ Once the extension is installed, simply use it in your code by  :
             
         }'
         
-    ]
-    
+    ]    
 ]); ?>
