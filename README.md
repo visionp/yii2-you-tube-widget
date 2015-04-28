@@ -35,9 +35,9 @@ Once the extension is installed, simply use it in your code by  :
 
 Minimum: 
 
-<?php  echo \vision\ytbwidget\YouTube::widget([
+<?= \vision\ytbwidget\YouTube::widget([
     'videoId' => 'OQQpukc_IM4'    
-]); ?>
+]) ?>
 
 
 
@@ -74,4 +74,4 @@ Minimum:
         }'
         
     ]    
-]); ?>
+]) ?>
