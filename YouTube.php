@@ -160,7 +160,7 @@ class YouTube extends \yii\base\Widget
         }
         //add player events
         if(count($this->events) > 0){
-            $js_events .= "events: {";
+            $js_events .= ", events: {";
             foreach($this->events as $name => $val) {
                 $js_events .= "$name : $val,";
             }
