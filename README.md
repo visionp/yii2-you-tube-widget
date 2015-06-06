@@ -34,7 +34,6 @@ Events: "https://developers.google.com/youtube/js_api_reference?hl=ru#EventHandl
 Once the extension is installed, simply use it in your code by  :
 
 Minimum: 
-
 ```
 <?= \vision\ytbwidget\YouTube::widget([
     'videoId' => 'OQQpukc_IM4'    
