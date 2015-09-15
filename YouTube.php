@@ -178,6 +178,9 @@ class YouTube extends \yii\base\Widget
         if(!isset($this->playerVars['hl'])) {
             $this->playerVars['hl'] = substr(\Yii::$app->language, 0, 2 );
         }
+        if(isset($this->playerVars['loop']) && $this->playerVars['loop']){
+            $this->playerVars['playlist'] = $this->videoId;
+        }
         return array_merge($this->defaultSettings, $this->playerVars);
     }
 
